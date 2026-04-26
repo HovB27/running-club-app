@@ -29,7 +29,7 @@ if not st.session_state.user_name:
     if st.button("Enter"):
         if pwd == "RunYerevan2026" and name:
             st.session_state.user_name = name
-            cookie_manager.set("run_club_user", name, expires_at=3650)
+            cookie_manager.set("run_club_user", name, expires_at=datetime.now() + timedelta(days=3650))
             st.rerun()
     st.stop()
 
